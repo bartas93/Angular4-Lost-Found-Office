@@ -1,0 +1,18 @@
+<md-card class="item-card" *ngFor="let item of itemsCard">
+    <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>{{item.name}}</md-card-title>
+        <md-card-subtitle>{{item.category}} {{item.notificationDate.dayOfMonth}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image [src]="item.photoUrl" [alt]="item.name">
+    <md-card-content>
+        <p>
+            {{item.description}}
+        </p>
+    </md-card-content>
+
+    <md-card-actions>
+        <button md-fab>LIKE</button>
+        <button md-fab color="primary">SHARE</button>
+    </md-card-actions>
+</md-card>
