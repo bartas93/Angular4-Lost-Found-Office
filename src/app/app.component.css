@@ -1,3 +1,15 @@
 .container{
-    margin-top:50px;
+    margin:0 50px;
+}
+
+nav{
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #E8F9FB;
+}
+
+.active-link{
+    background-color: #E8F9FB;
 }

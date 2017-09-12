@@ -4,10 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdTabsModule } from '@angular/material';
-import { MdCardModule } from '@angular/material';
-import { MdGridListModule } from '@angular/material';
-import { MdButtonModule } from '@angular/material';
+import { MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +29,12 @@ import { ItemService } from './service/item.service';
     MdTabsModule,
     MdCardModule,
     MdGridListModule,
-    MdButtonModule
+    MdButtonModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdExpansionModule,
+    MdChipsModule,
+    MdDialogModule,
   ],
   providers: [ItemRepositoryService, ItemService],
   bootstrap: [AppComponent]

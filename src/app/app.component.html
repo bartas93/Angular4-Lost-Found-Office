@@ -1,7 +1,6 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav md-tab-nav-bar>
-  <a md-tab-link *ngFor="let tab of tabs" [routerLink]="[tab.path]" routerLinkActive #rla="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"
-    [active]="rla.isActive">
+<nav md-tab-nav-bar md-center-tabs position="0">
+  <a md-tab-link *ngFor="let tab of tabs" [routerLink]="[tab.path]" routerLinkActive="active-link" #rla="routerLinkActive"
+    [routerLinkActiveOptions]="{exact: true}" [active]="rla.isActive">
       {{ tab.label }}
     </a>
 </nav>

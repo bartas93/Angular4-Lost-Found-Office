@@ -1,18 +1,48 @@
-<md-card class="item-card" *ngFor="let item of itemsCard">
-    <md-card-header>
-        <div md-card-avatar class="example-header-image"></div>
-        <md-card-title>{{item.name}}</md-card-title>
-        <md-card-subtitle>{{item.category}} {{item.notificationDate.dayOfMonth}}</md-card-subtitle>
-    </md-card-header>
-    <img md-card-image [src]="item.photoUrl" [alt]="item.name">
-    <md-card-content>
-        <p>
-            {{item.description}}
-        </p>
-    </md-card-content>
+<!-- <md-grid-list cols="3" gutterSize="50px" rowHeight="650px">
+    <md-grid-tile *ngFor="let item of itemsCard"> -->
+<div class="card-flex">
+    <md-card *ngFor="let item of itemsCard" class="item-card" tabindex="0">
+        <md-card-header>
+            <div md-card-avatar class="item-header-image" [ngStyle]="{'background-image':'url(/assets/category-img/'+item.category+'.png)'}"></div>
+            <md-card-title>{{item.name}}</md-card-title>
+            <md-card-subtitle>{{item.category}}</md-card-subtitle>
+            <md-card-subtitle>
+                <i class="fa fa-calendar-check-o" aria-hidden="true">
+                            {{item.notificationDate.dayOfMonth+" "+item.notificationDate.month+"
+                                "+item.notificationDate.year}}
+                </i>
 
-    <md-card-actions>
-        <button md-fab>LIKE</button>
-        <button md-fab color="primary">SHARE</button>
-    </md-card-actions>
-</md-card>
+            </md-card-subtitle>
+        </md-card-header>
+
+        <img md-card-image [src]="item.photoUrl" [alt]="item.name">
+
+        <md-card-content>
+            <p>
+                {{item.description.slice(0,80)+" ..."}}
+            </p>
+        </md-card-content>
+        <md-card-content>
+            <md-expansion-panel class="wish-list-panel" [class.warn]="getLeastDaysString(item.notificationDate)==='Item is ready to collect!'">
+                <md-expansion-panel-header>
+                    <md-panel-title>
+                        WishList
+                    </md-panel-title>
+                    <md-panel-description>
+                        {{getLeastDaysString(item.notificationDate)}}
+                    </md-panel-description>
+                </md-expansion-panel-header>
+                <md-list>
+                    <md-list-item class="wish-list" *ngFor="let user of item.wishList">
+
+                        <h4 md-line><img src="assets/avatar-img/{{user.id}}.png"> {{user.name}} {{user.surname}}</h4>
+                    </md-list-item>
+                </md-list>
+            </md-expansion-panel>
+        </md-card-content>
+
+        <md-card-actions>
+            <button md-button color="primary" class="card-button">More info</button>
+        </md-card-actions>
+    </md-card>
+</div>

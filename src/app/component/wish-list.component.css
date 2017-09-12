@@ -1,9 +1,46 @@
-.item-card {
-    width: 400px;
-    margin:50px
+
+  
+  .item-header-image {
+/*       background-image: url('/assets/found.png'); */
+     background-size: cover;
+  }
+ 
+  .item-card{
+    min-width: 300px;
+    margin: 20px;
+    width: 25%;
+    height: auto;
+  } 
+
+  .card-flex{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
   }
 
-  .example-header-image {
-    /* background-image: url('../../../assets/img/examples/shiba1.jpg');
-     */background-size: cover;
+  .wish-list-panel{
+    width: 100%;
+  }
+  .wish-list-panel img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    float:left;
+  }
+
+  .wish-list-panel h4{
+    text-align: center;
+    vertical-align: middle;
+  }
+  .warn{
+    background-color:#ffe082;
+  }
+
+  .card-button{
+    display: block !important;
+    color: lightgray;
+    margin: auto !important;
+    width: 50%;
+    border: 0.1px solid lightgray;
   }
