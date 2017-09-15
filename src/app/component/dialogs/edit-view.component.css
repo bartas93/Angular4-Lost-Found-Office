@@ -1,0 +1,28 @@
+.edit-form{
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+
+.half{
+    float:left;
+    width: 50%;
+}
+
+.form-field-input{
+    width: 100%;
+    text-align: center;
+}
+.form-field-textarea{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.form-field-small-left{
+    width: 45%;
+    float: left;
+}
+.form-field-small-right{
+    width: 45%;
+    float: right;
+}

@@ -6,9 +6,9 @@
   }
  
   .item-card{
-    min-width: 300px;
+    min-width: 350px;
     margin: 20px;
-    width: 25%;
+    width: 20%;
     height: auto;
   } 
 
@@ -44,3 +44,4 @@
     width: 50%;
     border: 0.1px solid lightgray;
   }
+  

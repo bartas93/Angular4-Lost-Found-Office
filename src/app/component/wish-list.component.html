@@ -11,7 +11,6 @@
                             {{item.notificationDate.dayOfMonth+" "+item.notificationDate.month+"
                                 "+item.notificationDate.year}}
                 </i>
-
             </md-card-subtitle>
         </md-card-header>
 
@@ -34,7 +33,6 @@
                 </md-expansion-panel-header>
                 <md-list>
                     <md-list-item class="wish-list" *ngFor="let user of item.wishList">
-
                         <h4 md-line><img src="assets/avatar-img/{{user.id}}.png"> {{user.name}} {{user.surname}}</h4>
                     </md-list-item>
                 </md-list>
@@ -42,7 +40,7 @@
         </md-card-content>
 
         <md-card-actions>
-            <button md-button color="primary" class="card-button">More info</button>
+            <button md-button color="primary" class="card-button" (click)="openDialog(item.id)">More info</button>
         </md-card-actions>
     </md-card>
 </div>

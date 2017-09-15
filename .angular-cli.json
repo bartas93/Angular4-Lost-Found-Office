@@ -19,8 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "item-office.scss"
+        "styles.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

@@ -1,0 +1,44 @@
+<div id="image-description">
+    <img [src]="item.photoUrl" /><br>
+    <h2>
+        <p>{{item.description}}</p>
+    </h2>
+</div>
+<div id="info">
+    <div id="info-details">
+        <div id="info-box">
+            <p> status</p>
+            <h5>{{item.itemStatus}}</h5>
+        </div>
+        <div id="info-box">
+            <p> category</p>
+            <h5>{{item.category}}</h5>
+        </div>
+        <div id="info-box">
+            <p> added</p>
+            <h5>{{item.notificationDate.dayOfMonth+" "+item.notificationDate.month+" "+item.notificationDate.year}}
+            </h5>
+        </div>
+        <div id="info-box">
+            <p> color</p>
+            <h5>{{item.color}}</h5>
+        </div>
+        <div id="info-box">
+            <p> weight</p>
+            <h5>{{item.weight}}</h5>
+        </div>
+        <div *ngIf="item.owner" id="info-box-big">
+            <p> Owner</p>
+            <h5>{{item.owner.name}} {{item.owner.surname}}</h5>
+        </div>
+        <div *ngIf="item.finder" id="info-box-big">
+            <p> Founder</p>
+            <h5>{{item.finder.name}} {{item.finder.surname}}</h5>
+        </div>
+        <div id="info-box-big" *ngIf="item.wishList[0]">
+            <p> WishList</p>
+            <h5 *ngFor="let user of item.wishList">{{user.name+" "+ user.surname}}</h5>
+        </div>
+    </div>
+</div>
+<div style="clear:both;"></div>

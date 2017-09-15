@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { ItemCard } from '../model/item-card';
+import { Item } from '../model/item';
 import { ItemRepositoryService } from '../repository/item-repository.service';
 import { DateTime } from "../model/date-time";
 
@@ -22,5 +23,9 @@ export class ItemService {
             notificationDate.dayOfMonth, 0, 0, 0, 0).getTime();
         let distance = countDownDate - today;
         return Math.floor(distance / (1000 * 60 * 60 * 24));
+    }
+
+    getItemById(id: number): Observable<Item> {
+        return this.itemRepositoryService.getItemById(id);
     }
 }
