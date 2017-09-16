@@ -6,7 +6,7 @@ import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material'
 import { ItemService } from '../../service/item.service';
 import { DateUtilService } from '../../service/date-util.service';
 import { ItemCard } from '../../model/item-card';
-import { InfoDialogComponent } from "./dialogs/info-dialog.component";
+import { ItemDialogComponent } from "./dialogs/item-dialog.component";
 import { Item } from "../../model/item";
 import { HttpErrorResponse } from "@angular/common/http";
 
@@ -41,16 +41,14 @@ export class WishListComponent implements OnInit {
     openDialog(id: number): void {
         this.itemService.getItemById(id).subscribe(item => {
             this.currentItem = item;
-            let dialogRef = this.dialog.open(InfoDialogComponent, {
+            let dialogRef = this.dialog.open(ItemDialogComponent, {
                 height: '90%',
                 width: '80%',
                 data: { item: this.currentItem }
             });
             dialogRef.afterClosed().subscribe(result => {
-                console.log(result);
+                this.itemService.getItemCards().subscribe(res => this.itemsCard = res);
             });
         });
-
-
     }
 }

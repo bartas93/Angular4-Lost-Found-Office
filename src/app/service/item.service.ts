@@ -18,4 +18,8 @@ export class ItemService {
     getItemById(id: number): Observable<Item> {
         return this.itemRepositoryService.getItemById(id);
     }
+
+    saveItem(item: Item): Observable<ItemCard> {
+        return this.itemRepositoryService.saveItem(item);
+    }
 }

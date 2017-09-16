@@ -29,12 +29,12 @@
 .edit-button{
     width: 100%;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 80px;
 }
 .edit-button button{
     display: block !important;
     margin: auto !important;
-    width: 50%;
+    width: 60%;
     border: 0.1px solid lightgray;
     color: #1565c0;
  }

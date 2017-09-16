@@ -18,9 +18,11 @@ export class ItemRepositoryService {
         return this.http.get<ItemCard[]>(this.baseUrl + "cards");
     }
 
-
-
     getItemById(id: number): Observable<Item> {
         return this.http.get<Item>(this.baseUrl + id);
+    }
+
+    saveItem(item: Item): Observable<ItemCard> {
+        return this.http.post<ItemCard>(this.baseUrl + "save", item);
     }
 }

@@ -11,7 +11,7 @@ import { WishListComponent } from './component/item-component/wish-list.componen
 import { LostComponent } from './component/item-component/lost.component';
 import { FoundComponent } from './component/item-component/found.component';
 import { UsersComponent } from './component/user-component/users.component';
-import { InfoDialogComponent } from "./component/item-component/dialogs/info-dialog.component";
+import { ItemDialogComponent } from "./component/item-component/dialogs/item-dialog.component";
 import { InfoViewComponent } from "./component/item-component/dialogs/dialog-view/info-view.component";
 import { EditViewComponent } from "./component/item-component/dialogs/dialog-view/edit-view.component";
 import { ItemRepositoryService } from './repository/item-repository.service';
@@ -24,7 +24,7 @@ import { UserService } from './service/user.service';
 
 @NgModule({
   declarations: [
-    AppComponent, WishListComponent, LostComponent, FoundComponent, UsersComponent, InfoDialogComponent, EditViewComponent, InfoViewComponent
+    AppComponent, WishListComponent, LostComponent, FoundComponent, UsersComponent, ItemDialogComponent, EditViewComponent, InfoViewComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +52,7 @@ import { UserService } from './service/user.service';
   providers: [ItemRepositoryService, ItemService, EnumRepositoryService, UserRepositoryService, UserService, DateUtilService],
   bootstrap: [AppComponent],
   entryComponents: [
-    InfoDialogComponent
+    ItemDialogComponent
   ]
 })
 export class AppModule { }

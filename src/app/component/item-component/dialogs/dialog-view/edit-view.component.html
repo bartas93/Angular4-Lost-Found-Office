@@ -33,6 +33,9 @@
             </md-form-field>
         </p>
         <div style="clear: both;"></div>
+
+    </div>
+    <div class="half" style="padding-left: 20px;">
         <p>
             <md-form-field class="form-field-small-left">
                 <input mdInput placeholder="Color" required name="color" [(ngModel)]="item.color">
@@ -41,8 +44,6 @@
                 <input mdInput placeholder="Weight" required name="weight" [(ngModel)]="item.weight">
             </md-form-field>
         </p>
-    </div>
-    <div class="half" style="padding-left: 20px;">
         <md-form-field class="form-field-input">
             <input mdInput placeholder="photoUrl" required name="photoUrl" [(ngModel)]="item.photoUrl">
         </md-form-field>
@@ -69,7 +70,7 @@
         </p>
     </div>
     <div style="clear: both;"></div>
-    <div class=".edit-button">
+    <div class="edit-button">
         <button type="button" md-raised-button (click)="saveChanges()">Save</button>
     </div>
 </form>
