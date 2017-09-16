@@ -32,12 +32,42 @@
                 <md-datepicker #picker2></md-datepicker>
             </md-form-field>
         </p>
-
+        <div style="clear: both;"></div>
+        <p>
+            <md-form-field class="form-field-small-left">
+                <input mdInput placeholder="Color" required name="color" [(ngModel)]="item.color">
+            </md-form-field>
+            <md-form-field class="form-field-small-right">
+                <input mdInput placeholder="Weight" required name="weight" [(ngModel)]="item.weight">
+            </md-form-field>
+        </p>
     </div>
-    <div class="half "></div>
-
-
-
-
-
+    <div class="half" style="padding-left: 20px;">
+        <md-form-field class="form-field-input">
+            <input mdInput placeholder="photoUrl" required name="photoUrl" [(ngModel)]="item.photoUrl">
+        </md-form-field>
+        <p>
+            <md-select placeholder="Owner" [(ngModel)]="item.owner" name="owner" class="form-field-small-left">
+                <md-option *ngFor="let user of users" [value]="user">
+                    {{user.name+" "+user.surname}}
+                </md-option>
+            </md-select>
+            <md-select placeholder="Finder" [(ngModel)]="item.finder" name="finder" class="form-field-small-right">
+                <md-option *ngFor="let user of users" [value]="user">
+                    {{user.name+" "+user.surname}}
+                </md-option>
+            </md-select>
+        </p>
+        <p>
+            <md-select placeholder="Add users to WishList" [(ngModel)]="wishListUsers" name="wishlist" class="form-field-input" multiple>
+                <md-option *ngFor="let user of usersCanBeAddedToWishList" [value]="user">
+                    {{user.name+" "+user.surname}}
+                </md-option>
+            </md-select>
+        </p>
+    </div>
+    <div style="clear: both;"></div>
+    <div class=".edit-button">
+        <button type="button" md-raised-button (click)="saveChanges()">Save</button>
+    </div>
 </form>

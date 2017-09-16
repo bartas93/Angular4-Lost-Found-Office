@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdDatepickerModule, MdSelectModule, MdInputModule, MdMenuModule, MdSidenavModule, MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule, MdNativeDateModule } from '@angular/material';
+import { MdAutocompleteModule, MdDatepickerModule, MdSelectModule, MdInputModule, MdMenuModule, MdSidenavModule, MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule, MdNativeDateModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WishListComponent } from './component/wish-list.component';
@@ -15,7 +15,11 @@ import { InfoDialogComponent } from "./component/dialogs/info-dialog.component";
 import { InfoViewComponent } from "./component/dialogs/info-view.component";
 import { EditViewComponent } from "./component/dialogs/Edit-view.component";
 import { ItemRepositoryService } from './repository/item-repository.service';
+import { UserRepositoryService } from './repository/user-repository.service';
+import { EnumRepositoryService } from './repository/enum-repository.service';
 import { ItemService } from './service/item.service';
+import { DateUtilService } from './service/date-util.service';
+import { UserService } from './service/user.service';
 
 
 @NgModule({
@@ -42,9 +46,10 @@ import { ItemService } from './service/item.service';
     MdInputModule,
     MdSelectModule,
     MdDatepickerModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    MdAutocompleteModule
   ],
-  providers: [ItemRepositoryService, ItemService],
+  providers: [ItemRepositoryService, ItemService, EnumRepositoryService, UserRepositoryService, UserService, DateUtilService],
   bootstrap: [AppComponent],
   entryComponents: [
     InfoDialogComponent

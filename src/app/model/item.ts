@@ -1,5 +1,4 @@
 import { User } from './user';
-import { DateTime } from './date-time';
 
 export interface Item {
     id: number,
@@ -7,8 +6,8 @@ export interface Item {
     description: string,
     category: string,
     itemStatus: string,
-    notificationDate: DateTime,
-    realizationDate: DateTime,
+    notificationDate: number[],
+    realizationDate: number[],
     weight: number,
     color: string,
     photoUrl: string,

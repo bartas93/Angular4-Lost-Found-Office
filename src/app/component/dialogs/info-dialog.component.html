@@ -17,10 +17,9 @@
 
 <md-dialog-content class="dialog-content">
     <info-view *ngIf="currentInfoView" [item]="data.item"></info-view>
-    <edit-view *ngIf="currentInfoView===false" [item]="data.item"></edit-view>
+    <edit-view *ngIf="currentInfoView===false" [item]="data.item" (itemCallBack)="itemChanged($event)"></edit-view>
 </md-dialog-content>
 
 <md-dialog-actions class="dialog-buttons">
-    <button *ngIf="currentInfoView===false" type="button" md-raised-button (click)="dialogRef.close(true)">Save</button>
     <button type="button" md-raised-button (click)="dialogRef.close(true)">Return</button>
 </md-dialog-actions>

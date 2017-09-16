@@ -14,9 +14,14 @@
             <p> category</p>
             <h5>{{item.category}}</h5>
         </div>
-        <div id="info-box">
+        <div id="info-box" *ngIf="item.notificationDate">
             <p> added</p>
-            <h5>{{item.notificationDate.dayOfMonth+" "+item.notificationDate.month+" "+item.notificationDate.year}}
+            <h5>{{item.notificationDate[2]+"-"+item.notificationDate[1]+"-"+item.notificationDate[0]}}
+            </h5>
+        </div>
+        <div id="info-box" *ngIf="item.realizationDate">
+            <p> realized</p>
+            <h5>{{item.realizationDate[2]+"-"+item.realizationDate[1]+"-"+item.realizationDate[0]}}
             </h5>
         </div>
         <div id="info-box">

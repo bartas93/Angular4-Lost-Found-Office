@@ -6,12 +6,11 @@
 
 .half{
     float:left;
-    width: 50%;
+    width: 45%;
 }
 
 .form-field-input{
     width: 100%;
-    text-align: center;
 }
 .form-field-textarea{
     width: 100%;
@@ -21,8 +20,21 @@
 .form-field-small-left{
     width: 45%;
     float: left;
+
 }
 .form-field-small-right{
     width: 45%;
     float: right;
 }
+.edit-button{
+    width: 100%;
+    margin: auto;
+    padding-top: 40px;
+}
+.edit-button button{
+    display: block !important;
+    margin: auto !important;
+    width: 50%;
+    border: 0.1px solid lightgray;
+    color: #1565c0;
+ }

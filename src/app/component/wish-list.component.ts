@@ -4,8 +4,8 @@ import { Location } from '@angular/common';
 import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material'
 
 import { ItemService } from '../service/item.service';
+import { DateUtilService } from '../service/date-util.service';
 import { ItemCard } from '../model/item-card';
-import { DateTime } from "../model/date-time";
 import { InfoDialogComponent } from "./dialogs/info-dialog.component";
 import { Item } from "../model/item";
 import { HttpErrorResponse } from "@angular/common/http";
@@ -19,7 +19,7 @@ export class WishListComponent implements OnInit {
     private itemsCard: ItemCard[];
     private currentItem: Item;
 
-    constructor(private itemService: ItemService, public dialog: MdDialog) { }
+    constructor(private itemService: ItemService, public dialog: MdDialog, private dateUtilService: DateUtilService) { }
 
     getCardItems(): void {
         this.itemService.getItemCards().subscribe(items => this.itemsCard = items);
@@ -29,8 +29,8 @@ export class WishListComponent implements OnInit {
         this.getCardItems();
     }
 
-    getLeastDaysString(notificationDate: DateTime): string {
-        let days = this.itemService.getLeastDays(notificationDate);
+    getLeastDaysString(notificationDate: number[]): string {
+        let days = this.dateUtilService.getLeastDays(notificationDate);
         if (days < 0) {
             return "Item is ready to collect!";
         } else {

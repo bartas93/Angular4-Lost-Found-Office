@@ -22,4 +22,10 @@ export class InfoDialogComponent {
     onNoClick(): void {
         this.dialogRef.close();
     }
+
+    itemChanged(item: Item) {
+        console.log(item.category);
+
+        this.dialogRef.close();
+    }
 }

@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { ItemCard } from '../model/item-card';
 import { Item } from '../model/item';
 import { ItemRepositoryService } from '../repository/item-repository.service';
-import { DateTime } from "../model/date-time";
 
 @Injectable()
 export class ItemService {
@@ -14,15 +13,6 @@ export class ItemService {
 
     getItemCards(): Observable<ItemCard[]> {
         return this.itemRepositoryService.getItemCards();
-    }
-    getLeastDays(notificationDate: DateTime): number {
-        let month = notificationDate.monthValue;
-        let today = new Date().getTime();
-        let countDownDate = new Date(notificationDate.year,
-            notificationDate.monthValue,
-            notificationDate.dayOfMonth, 0, 0, 0, 0).getTime();
-        let distance = countDownDate - today;
-        return Math.floor(distance / (1000 * 60 * 60 * 24));
     }
 
     getItemById(id: number): Observable<Item> {
