@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
-import { Item } from "../../model/item";
+import { Item } from "../../../model/item";
 
 @Component({
     selector: 'info-dialog.component',

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { WishListComponent } from './component/wish-list.component';
-import { LostComponent } from './component/lost.component';
-import { FoundComponent } from './component/found.component';
-import { UsersComponent } from './component/users.component';
+import { WishListComponent } from './component/item-component/wish-list.component';
+import { LostComponent } from './component/item-component/lost.component';
+import { FoundComponent } from './component/item-component/found.component';
+import { UsersComponent } from './component/user-component/users.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/wish-list', pathMatch: 'full' },

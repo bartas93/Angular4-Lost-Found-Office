@@ -3,11 +3,11 @@ import { Location } from '@angular/common';
 
 import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material'
 
-import { ItemService } from '../service/item.service';
-import { DateUtilService } from '../service/date-util.service';
-import { ItemCard } from '../model/item-card';
+import { ItemService } from '../../service/item.service';
+import { DateUtilService } from '../../service/date-util.service';
+import { ItemCard } from '../../model/item-card';
 import { InfoDialogComponent } from "./dialogs/info-dialog.component";
-import { Item } from "../model/item";
+import { Item } from "../../model/item";
 import { HttpErrorResponse } from "@angular/common/http";
 
 

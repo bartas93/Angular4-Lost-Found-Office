@@ -1,10 +1,10 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Item } from "../../model/item";
-import { User } from "../../model/user";
-import { ItemService } from '../../service/item.service';
-import { UserService } from '../../service/user.service';
-import { DateUtilService } from '../../service/date-util.service';
-import { EnumRepositoryService } from '../../repository/enum-repository.service';
+import { Item } from "../../../../model/item";
+import { User } from "../../../../model/user";
+import { ItemService } from '../../../../service/item.service';
+import { UserService } from '../../../../service/user.service';
+import { DateUtilService } from '../../../../service/date-util.service';
+import { EnumRepositoryService } from '../../../../repository/enum-repository.service';
 declare var $: any;
 
 @Component({
