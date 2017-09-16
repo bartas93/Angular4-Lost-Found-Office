@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { UserRepositoryService } from '../repository/user-repository.service';
 import { User } from "../model/user";
 import { Item } from "../model/item";
+declare var $: any;
 
 @Injectable()
 export class UserService {
@@ -14,18 +15,10 @@ export class UserService {
         return this.userRepositoryService.getUsers();
     }
 
-    private isLessThenThree(num: number): boolean {
-        return num < 3;
-    }
-
-    private getUserWhoseAreLessThenInThreeLists(allUsers: User[]): User[] {
-        let filtred = allUsers.filter((user) => this.isLessThenThree(user.inWishLists));
-        return filtred;
-    }
-
     getUsersCanBeAddedToWishList(users: User[], item: Item): User[] {
-        let usersInLessThenThreeWishLists: User[] = this.getUserWhoseAreLessThenInThreeLists(users);
+        let usersInLessThenThreeWishLists: User[] = users.filter(u => u.inWishlists < 3);
         return usersInLessThenThreeWishLists.filter(user => !item.wishList.some(u => u.id == user.id));
     }
+
 
 }

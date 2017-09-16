@@ -16,7 +16,6 @@ export class EditViewComponent implements OnInit {
     @Input() item: Item;
     @Output() itemCallBack = new EventEmitter<Item>();
 
-
     private allItemStatus = [];
     private allCategories = [];
     private notificationDate: Date;
@@ -31,12 +30,12 @@ export class EditViewComponent implements OnInit {
         this.enumRepositoryService.getAllItemStatus().subscribe(res => this.allItemStatus = res);
         this.enumRepositoryService.getAllCategories().subscribe(res => this.allCategories = res);
         this.userService.getUsers().subscribe(res => { this.users = res; this.usersCanBeAddedToWishList = this.userService.getUsersCanBeAddedToWishList(res, this.item); });
-        this.item.notificationDate? this.notificationDate = this.dateUtilService.localDateToDate(this.item.notificationDate):this.notificationDate = null; 
-        this.item.realizationDate? this.realizationDate = this.dateUtilService.localDateToDate(this.item.realizationDate):this.realizationDate=null;
+        this.item.notificationDate ? this.notificationDate = this.dateUtilService.localDateToDate(this.item.notificationDate) : this.notificationDate = null;
+        this.item.realizationDate ? this.realizationDate = this.dateUtilService.localDateToDate(this.item.realizationDate) : this.realizationDate = null;
     }
-   
+
     saveChanges() {
-        this.wishListUsers.forEach(user => this.item.wishList.push(user));   
+        this.wishListUsers.forEach(user => this.item.wishList.push(user));
         this.item.notificationDate = this.dateUtilService.dateToLocalDate(this.notificationDate);
         this.item.realizationDate = this.dateUtilService.dateToLocalDate(this.realizationDate);
         this.itemCallBack.emit(this.item)

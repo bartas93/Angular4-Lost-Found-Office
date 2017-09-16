@@ -4,5 +4,5 @@ export interface User {
     surname: string,
     email: string,
     phoneNumber: string,
-    inWishLists: number
+    inWishlists: number
 }

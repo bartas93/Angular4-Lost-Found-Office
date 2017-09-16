@@ -47,12 +47,14 @@
             <input mdInput placeholder="photoUrl" required name="photoUrl" [(ngModel)]="item.photoUrl">
         </md-form-field>
         <p>
-            <md-select placeholder="Owner" [(ngModel)]="item.owner" name="owner" class="form-field-small-left">
+            <md-select [placeholder]="item.owner?item.owner.name+' '+item.owner.surname:'Owner'" [(ngModel)]="item.owner" name="owner"
+                class="form-field-small-left">
                 <md-option *ngFor="let user of users" [value]="user">
                     {{user.name+" "+user.surname}}
                 </md-option>
             </md-select>
-            <md-select placeholder="Finder" [(ngModel)]="item.finder" name="finder" class="form-field-small-right">
+            <md-select [placeholder]="item.finder?item.finder.name+' '+item.finder.surname:'Finder'" [(ngModel)]="item.finder" name="finder"
+                class="form-field-small-right">
                 <md-option *ngFor="let user of users" [value]="user">
                     {{user.name+" "+user.surname}}
                 </md-option>
