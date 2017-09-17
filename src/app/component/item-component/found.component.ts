@@ -17,7 +17,7 @@ export class FoundComponent implements OnInit {
     private itemsTable: ItemTable[];
     private currentItem: Item;
     displayedColumns = ['Id', 'Name', 'Category', 'Added', 'Weight', 'Color'];
-    newItem: Item = new ItemImpl("", "", "", "FOUND", this.dateUtilService.getCurrentDateAsLocalDate(), 0, "", "", -1);
+    newItem: Item = new ItemImpl("", "", "", "FOUND", this.dateUtilService.getCurrentDateAsLocalDate(), 0, "", "", -1, []);
 
     constructor(private itemService: ItemService, public snackBar: MdSnackBar, public dialog: MdDialog, private dateUtilService: DateUtilService) { }
 

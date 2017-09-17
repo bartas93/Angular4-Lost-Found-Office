@@ -1,0 +1,19 @@
+<div class="table-content-cutom">
+    <table id="table_id" class="display" class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let name of displayedColumns">{{name}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users" class="hover-row">
+                <th>{{user.id}}</th>
+                <th>{{user.name}}</th>
+                <th>{{user.surname}}</th>
+                <th>{{user.email}}</th>
+                <th>{{user.phoneNumber}}</th>
+                <th>{{user.inWishlists}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -9,12 +9,12 @@
                 <textarea mdInput required placeholder="Description" name="description" [(ngModel)]="item.description" rows="4"></textarea>
             </md-form-field>
         </p>
-        <md-select placeholder="Item status" [(ngModel)]="item.itemStatus" name="itemStatus" class="form-field-small-left">
+        <md-select placeholder="Item status" required [(ngModel)]="item.itemStatus" name="itemStatus" class="form-field-small-left">
             <md-option *ngFor="let status of allItemStatus" [value]="status">
                 {{status}}
             </md-option>
         </md-select>
-        <md-select placeholder="Category" [(ngModel)]="item.category" name="category" class="form-field-small-right">
+        <md-select placeholder="Category" [(ngModel)]="item.category" required name="category" class="form-field-small-right">
             <md-option *ngFor="let category of allCategories" [value]="category">
                 {{category}}
             </md-option>
@@ -22,7 +22,7 @@
         <div style="clear: both;"></div>
         <p>
             <md-form-field class="form-field-small-left">
-                <input mdInput [mdDatepicker]="picker" placeholder="Notification date" [(ngModel)]="notificationDate" name="notificationDate">
+                <input mdInput required [mdDatepicker]="picker" placeholder="Notification date" [(ngModel)]="notificationDate" name="notificationDate">
                 <md-datepicker-toggle mdSuffix [for]=" picker "></md-datepicker-toggle>
                 <md-datepicker #picker></md-datepicker>
             </md-form-field>
@@ -68,6 +68,9 @@
                 </md-option>
             </md-select>
         </p>
+        Rate:
+        <md-slider [value]="item.quantityOfStars" class="rating" [disabled]="!(item.itemStatus==='COMPLETED'|| (notificationDate!=null&&realizationDate!=null) || (item.owner!=null && item.finder!=null))"
+            max="5" min="0" thumb-label="true"></md-slider>
     </div>
     <div style="clear: both;"></div>
     <div class="edit-button">

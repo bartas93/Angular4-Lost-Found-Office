@@ -18,7 +18,7 @@ export class ItemImpl implements Item {
     wishList: User[];
 
     constructor(name: string, description: string, category: string, itemStatus: string,
-        notificationDate: number[], weight: number, color: string, photoUrl: string, quantityOfStars: number) {
+        notificationDate: number[], weight: number, color: string, photoUrl: string, quantityOfStars: number, wishList: User[]) {
         this.name = name;
         this.description = description;
         this.category = category;
@@ -28,5 +28,6 @@ export class ItemImpl implements Item {
         this.color = color;
         this.photoUrl = photoUrl;
         this.quantityOfStars = quantityOfStars;
+        this.wishList = wishList;
     }
 }

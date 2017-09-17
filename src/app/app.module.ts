@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdTableModule, MdSnackBarModule, MdAutocompleteModule, MdDatepickerModule, MdSelectModule, MdInputModule, MdMenuModule, MdSidenavModule, MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule, MdNativeDateModule } from '@angular/material';
+import { MdSliderModule, MdTableModule, MdSnackBarModule, MdAutocompleteModule, MdDatepickerModule, MdSelectModule, MdInputModule, MdMenuModule, MdSidenavModule, MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule, MdNativeDateModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WishListComponent } from './component/item-component/wish-list.component';
@@ -50,7 +50,8 @@ import { MessageComponent } from "./component/alerts/message.component";
     MdNativeDateModule,
     MdAutocompleteModule,
     MdSnackBarModule,
-    MdTableModule
+    MdTableModule,
+    MdSliderModule
   ],
   providers: [ItemRepositoryService, ItemService, EnumRepositoryService, UserRepositoryService, UserService, DateUtilService],
   bootstrap: [AppComponent],
