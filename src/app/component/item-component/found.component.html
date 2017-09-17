@@ -1,0 +1,25 @@
+<div class="table-content-cutom">
+    <div class="add-button">
+        <button md-fab (click)="addNewItem()">
+                <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+            </button>
+    </div>
+    <table id="table_id" class="display" class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let name of displayedColumns">{{name}}</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of itemsTable" class="hover-row" (click)="openDialog(item.id)">
+                <th>{{item.id}}</th>
+                <th>{{item.name}}</th>
+                <th>{{item.category}}</th>
+                <th>{{item.notificationDate| date}}</th>
+                <th>{{item.weight}}</th>
+                <th>{{item.color}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>

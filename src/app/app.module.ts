@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdAutocompleteModule, MdDatepickerModule, MdSelectModule, MdInputModule, MdMenuModule, MdSidenavModule, MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule, MdNativeDateModule } from '@angular/material';
+import { MdTableModule, MdSnackBarModule, MdAutocompleteModule, MdDatepickerModule, MdSelectModule, MdInputModule, MdMenuModule, MdSidenavModule, MdDialogModule, MdChipsModule, MdExpansionModule, MdToolbarModule, MdTabsModule, MdCardModule, MdGridListModule, MdButtonModule, MdIconModule, MdNativeDateModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WishListComponent } from './component/item-component/wish-list.component';
@@ -20,11 +20,12 @@ import { EnumRepositoryService } from './repository/enum-repository.service';
 import { ItemService } from './service/item.service';
 import { DateUtilService } from './service/date-util.service';
 import { UserService } from './service/user.service';
+import { MessageComponent } from "./component/alerts/message.component";
 
 
 @NgModule({
   declarations: [
-    AppComponent, WishListComponent, LostComponent, FoundComponent, UsersComponent, ItemDialogComponent, EditViewComponent, InfoViewComponent
+    AppComponent, WishListComponent, LostComponent, FoundComponent, UsersComponent, ItemDialogComponent, EditViewComponent, InfoViewComponent, MessageComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,12 +48,15 @@ import { UserService } from './service/user.service';
     MdSelectModule,
     MdDatepickerModule,
     MdNativeDateModule,
-    MdAutocompleteModule
+    MdAutocompleteModule,
+    MdSnackBarModule,
+    MdTableModule
   ],
   providers: [ItemRepositoryService, ItemService, EnumRepositoryService, UserRepositoryService, UserService, DateUtilService],
   bootstrap: [AppComponent],
   entryComponents: [
-    ItemDialogComponent
+    ItemDialogComponent,
+    MessageComponent
   ]
 })
 export class AppModule { }

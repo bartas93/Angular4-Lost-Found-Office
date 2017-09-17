@@ -21,7 +21,10 @@ export class DateUtilService {
         }
     }
 
-
+    getCurrentDateAsLocalDate() {
+        let currentDate = new Date();
+        return this.dateToLocalDate(currentDate);
+    }
     dateToLocalDate(date: Date): number[] {
         if (date != null) {
             return [date.getFullYear(), date.getMonth(), date.getDate()];

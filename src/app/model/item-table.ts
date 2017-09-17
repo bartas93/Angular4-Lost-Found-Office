@@ -1,6 +1,6 @@
 import { User } from './user';
 
-export interface Item {
+export interface ItemTable {
     id: number,
     name: string,
     category: string,

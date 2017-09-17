@@ -40,3 +40,9 @@ body{
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+#loading{
+  position: absolute;
+  top: 45%;
+  left:45%;
+}

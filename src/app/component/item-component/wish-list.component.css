@@ -1,18 +1,17 @@
 
   
   .item-header-image {
-/*       background-image: url('/assets/found.png'); */
      background-size: cover;
   }
  
   .item-card{
-    min-width: 350px;
+    min-width: 330px;
     margin: 20px;
     width: 20%;
     height: auto;
   } 
 
-  .card-flex{
+  .card-flex-custom{
     display: flex;
     flex-wrap:wrap;
     align-items: center;

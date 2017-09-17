@@ -71,6 +71,6 @@
     </div>
     <div style="clear: both;"></div>
     <div class="edit-button">
-        <button type="button" md-raised-button (click)="saveChanges()">Save</button>
+        <button type="button" [disabled]="!itemForm.valid" md-raised-button (click)="saveChanges()">Save</button>
     </div>
 </form>

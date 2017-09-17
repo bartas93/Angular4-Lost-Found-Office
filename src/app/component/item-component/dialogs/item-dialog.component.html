@@ -5,11 +5,11 @@
             <i class="fa fa-pencil" aria-hidden="true"></i>
             <span>Edit</span>
         </button>
-        <button *ngIf="currentInfoView===false" md-menu-item (click)="changeView()">
+        <button *ngIf="currentInfoView===false" [disabled]="data.item.name===''" md-menu-item (click)="changeView()">
             <i class="fa fa-info" aria-hidden="true"></i>
             <span>Info</span>
             </button>
-        <button md-menu-item>
+        <button md-menu-item (click)="removeItem(data.item)" [disabled]="data.item.name===''">
             <i class="fa fa-trash" aria-hidden="true"></i>
             <span>Remove</span>
         </button>

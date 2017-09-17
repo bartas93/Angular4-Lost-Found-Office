@@ -16,7 +16,9 @@ export class ItemDialogComponent {
     private currentInfoView: boolean = true;
 
     constructor(private itemService: ItemService, public dialogRef: MdDialogRef<ItemDialogComponent>,
-        @Inject(MD_DIALOG_DATA) public data: any) { }
+        @Inject(MD_DIALOG_DATA) public data: any) {
+        this.currentInfoView = data.currentInfoView;
+    }
 
     changeView() {
         this.currentInfoView ? this.currentInfoView = false : this.currentInfoView = true;
@@ -27,6 +29,11 @@ export class ItemDialogComponent {
     }
 
     itemChanged(item: Item) {
-        this.itemService.saveItem(item).subscribe(itemCard => this.dialogRef.close(itemCard));
+        this.itemService.saveItem(item).subscribe(item => this.dialogRef.close(item));
     }
+    removeItem(item: Item) {
+        this.itemService.removeItem(item).subscribe(item => this.dialogRef.close(item));
+    }
+
+
 }
