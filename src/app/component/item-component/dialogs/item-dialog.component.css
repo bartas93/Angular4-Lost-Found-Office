@@ -1,20 +1,29 @@
-.dialog-title{
-    font-size: 40px;
-    color: #1565c0;
-    font-weight: bold;
-}
-
-
 
  .dialog-buttons button{
     display: block !important;
     margin: auto !important;
     width: 50%;
-    border: 0.1px solid lightgray;
-    color: #1565c0;
+    border: 0.1px solid #2962ff;
+    color: #2962ff;
+    letter-spacing: 2px;
+    font-size: 120%;
  }
+ .dialog-buttons button:hover{
+     background-color: #0039cb;
+     color: white;
+ }
+
  .dialog-buttons{
      width: 100%;
      margin: auto;
      padding-top: 40px;
  }
+.custom-card-title{
+    margin-left: 20px;
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+.fa-bars:hover{
+    color:#2962ff;
+}

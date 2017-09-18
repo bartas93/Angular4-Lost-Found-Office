@@ -32,15 +32,28 @@
     text-align: center;
     vertical-align: middle;
   }
-  .warn{
-    background-color:#ffe082;
+  .custom-warn{
+    background-color:#ffff74;
   }
 
   .card-button{
     display: block !important;
-    color: lightgray;
+    color:#2962ff ;
     margin: auto !important;
-    width: 50%;
-    border: 0.1px solid lightgray;
+    width: 90%;
+    border: 0.1px solid #2962ff;
+  }
+  .card-button:hover{
+    background-color: #0039cb;
+    color:white;
   }
   
+  md-card-title{
+    color:#2962ff;
+    font-size: 120% !important;
+    font-weight: bold;
+    letter-spacing: 2px !important;
+  }
+  md-card-content p {
+    color: grey;
+  }

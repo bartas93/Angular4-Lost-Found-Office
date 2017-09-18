@@ -1,8 +1,8 @@
 <div class="card-flex-custom">
-    <md-card *ngFor="let item of itemsCard" class="item-card" tabindex="0">
+    <md-card *ngFor="let item of itemsCard" class="wow item-card" [class.fadeIn]="initFlag" data-wow-duration="2s" tabindex="0">
         <md-card-header>
             <div md-card-avatar class="item-header-image" [ngStyle]="{'background-image':'url(/assets/category-img/'+item.category+'.png)'}"></div>
-            <md-card-title>{{item.name}}</md-card-title>
+            <md-card-title>{{item.name|uppercase}}</md-card-title>
             <md-card-subtitle>{{item.category}}</md-card-subtitle>
             <md-card-subtitle>
                 <i class="fa fa-calendar-check-o" aria-hidden="true">
@@ -19,7 +19,7 @@
             </p>
         </md-card-content>
         <md-card-content>
-            <md-expansion-panel class="wish-list-panel" [class.warn]="getLeastDaysString(item.notificationDate)==='Item is ready to collect!'">
+            <md-expansion-panel class="wish-list-panel" [class.custom-warn]="getLeastDaysString(item.notificationDate)==='Item is ready to collect!'">
                 <md-expansion-panel-header>
                     <md-panel-title>
                         WishList

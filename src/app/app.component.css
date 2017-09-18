@@ -4,12 +4,19 @@
 
 nav{
     text-align: center;
+    background-color: #0039cb;
+    color: white;
 }
 
 nav a:hover {
-    background-color: #E8F9FB;
+    background-color:#0039cb;
 }
 
 .active-link{
-    background-color: #E8F9FB;
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }

@@ -1,47 +1,47 @@
 <div id="image-description">
     <img [src]="item.photoUrl" /><br>
-    <h2>
+    <h2 class="wow fadeInLeft">
         <p>{{item.description}}</p>
     </h2>
 </div>
 <div id="info">
     <div id="info-details">
         <div id="info-box">
-            <p> status</p>
+            <i class="fa fa-sliders fa-2x" aria-hidden="true"></i>
             <h5>{{item.itemStatus}}</h5>
         </div>
         <div id="info-box">
-            <p> category</p>
+            <i class="fa fa-pie-chart fa-2x" aria-hidden="true"></i>
             <h5>{{item.category}}</h5>
         </div>
         <div id="info-box" *ngIf="item.notificationDate">
-            <p> added</p>
+            <i class="fa fa-calendar-plus-o fa-2x" mdTooltip="added" aria-hidden="true"></i>
             <h5>{{item.notificationDate[2]+"-"+item.notificationDate[1]+"-"+item.notificationDate[0]}}
             </h5>
         </div>
         <div id="info-box" *ngIf="item.realizationDate">
-            <p> realized</p>
+            <i class="fa fa-calendar-check-o fa-2x" mdTooltip="realized" aria-hidden="true"></i>
             <h5>{{item.realizationDate[2]+"-"+item.realizationDate[1]+"-"+item.realizationDate[0]}}
             </h5>
         </div>
         <div id="info-box">
-            <p> color</p>
+            <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
             <h5>{{item.color}}</h5>
         </div>
         <div id="info-box">
-            <p> weight</p>
+            <i class="fa fa-balance-scale fa-2x" aria-hidden="true"></i>
             <h5>{{item.weight}}</h5>
         </div>
         <div *ngIf="item.owner" id="info-box-big">
-            <p> Owner</p>
+            <i class="fa fa-home fa-2x" aria-hidden="true" mdTooltip="Owner"></i>
             <h5>{{item.owner.name}} {{item.owner.surname}}</h5>
         </div>
         <div *ngIf="item.finder" id="info-box-big">
-            <p> Founder</p>
+            <i class="fa fa-search fa-2x" aria-hidden="true" mdTooltip="Finder"></i>
             <h5>{{item.finder.name}} {{item.finder.surname}}</h5>
         </div>
         <div id="info-box-big" *ngIf="item.wishList[0]">
-            <p> WishList</p>
+            <i class="fa fa-slideshare fa-2x" aria-hidden="true" mdTooltip="Wishlist"></i>
             <h5 *ngFor="let user of item.wishList">{{user.name+" "+ user.surname}}</h5>
         </div>
     </div>

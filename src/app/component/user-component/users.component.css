@@ -1,0 +1,25 @@
+tbody tr:hover{
+    background-color: #ffd740;
+    font-weight: bold;
+}
+
+
+.table-content-cutom{
+    margin-top:100px;
+    width: 100%;
+    height: 100%;
+}
+
+th{
+    background-color: #2962ff;
+    color: white;
+}
+
+.mat-fab.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+    background-color: #ffd740;
+}
+
+.mat-fab.mat-accent:hover, .mat-mini-fab.mat-accent:hover, .mat-raised-button.mat-accent:hover {
+    background-color: #ffd740;
+}
+

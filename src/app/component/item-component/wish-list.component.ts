@@ -19,6 +19,7 @@ import { MessageComponent } from "../alerts/message.component";
 export class WishListComponent implements OnInit {
     private itemsCard: ItemCard[];
     private currentItem: Item;
+    private initFlag: boolean = true;
 
     constructor(private itemService: ItemService, public snackBar: MdSnackBar, public dialog: MdDialog, private dateUtilService: DateUtilService) { }
 
@@ -41,6 +42,7 @@ export class WishListComponent implements OnInit {
     }
 
     openDialog(id: number): void {
+        this.initFlag = false;
         this.itemService.getItemById(id).subscribe(item => {
             this.currentItem = item;
             let dialogRef = this.dialog.open(ItemDialogComponent, {
@@ -62,15 +64,17 @@ export class WishListComponent implements OnInit {
 
     openSnackBar(result: Item) {
         let message: string;
-        if (result.itemStatus == "COMPLETED") {
-            message = "Item deleted:";
-        } else { message = "Item saved:" }
-        this.snackBar.openFromComponent(MessageComponent, {
-            data: {
-                message: message,
-                item: result
-            },
-            duration: 2000,
-        });
+        if (result.name != null) {
+            if (result.itemStatus == "COMPLETED") {
+                message = "Item deleted:";
+            } else { message = "Item saved:" }
+            this.snackBar.openFromComponent(MessageComponent, {
+                data: {
+                    message: message,
+                    item: result
+                },
+                duration: 2000,
+            });
+        }
     }
 }

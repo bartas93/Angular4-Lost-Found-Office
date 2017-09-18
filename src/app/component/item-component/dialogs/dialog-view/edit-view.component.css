@@ -1,12 +1,12 @@
 .edit-form{
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding: 30px;
 }
 
 .half{
     float:left;
-    width: 45%;
+    width: 50%;
+    padding: 40px;
 }
 
 .form-field-input{
@@ -29,12 +29,22 @@
 .edit-button{
     width: 100%;
     margin: auto;
-    padding-top: 80px;
 }
 .edit-button button{
     display: block !important;
     margin: auto !important;
-    width: 60%;
-    border: 0.1px solid lightgray;
-    color: #1565c0;
- }
+    width: 50%;
+    border: 0.1px solid #2962ff;
+    color: #2962ff;
+    letter-spacing: 2px;
+    font-size: 120%;
+}
+
+md-form-field, md-select {
+    margin-bottom: 20px;
+}
+
+.edit-button button:hover{
+    background-color: #0039cb;
+    color: white;
+}
