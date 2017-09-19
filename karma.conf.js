@@ -3,6 +3,9 @@
 
 module.exports = function (config) {
   config.set({
+    files: [
+      'https://code.jquery.com/jquery-1.11.2.min.js'
+    ],
     basePath: '',
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
@@ -12,11 +15,11 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular/cli/plugins/karma')
     ],
-    client:{
+    client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
+      reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
     angularCli: {
