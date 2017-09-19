@@ -20,8 +20,5 @@ export class UserService {
         if (item.wishList != null) {
             return usersInLessThenThreeWishLists.filter(user => !item.wishList.some(u => u.id == user.id));
         } else { return usersInLessThenThreeWishLists; }
-
     }
-
-
 }

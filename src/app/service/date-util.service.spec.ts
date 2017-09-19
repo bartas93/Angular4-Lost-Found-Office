@@ -9,7 +9,7 @@ describe("DateUtilService", function () {
     });
 
 
-    it('Get least days', () => {
+    it('should get 4 days', () => {
         //given
         let today = new Date();
         let dateFromRest: number[] = [today.getFullYear(), today.getMonth(), today.getDate() + 4];
@@ -19,7 +19,7 @@ describe("DateUtilService", function () {
         expect(days).toBe(4)
     });
 
-    it(' localdate form spring to date in js', () => {
+    it('should map localdate form spring to date in js', () => {
         //given
         let today = new Date();
         let dateFromRest: number[] = [today.getFullYear(), today.getMonth() + 1, today.getDate()];
@@ -31,7 +31,7 @@ describe("DateUtilService", function () {
         expect(date.getFullYear()).toBe(today.getFullYear());
     });
 
-    it('date to local date', () => {
+    it('should map date to local date from spring', () => {
         //given
         let today = new Date();
         let dateFromRest: number[] = [today.getFullYear(), today.getMonth() + 1, today.getDate()];
