@@ -48,3 +48,13 @@ md-form-field, md-select {
     background-color: #0039cb;
     color: white;
 }
+.edit-button button:disabled{
+    background-color: white;
+    color: #2962ff;
+    cursor: not-allowed;
+}
+
+.rating{
+    width: 100%;
+    margin-top:10px;
+}

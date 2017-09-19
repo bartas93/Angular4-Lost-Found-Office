@@ -1,7 +1,6 @@
 tbody tr:hover{
     background-color: #ffd740;
     font-weight: bold;
-    color: white;
     cursor: pointer;
 }
 
@@ -23,6 +22,7 @@ th{
 }
 
 .mat-fab.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+    color: white;
     background-color: #ffd740;
 }
 

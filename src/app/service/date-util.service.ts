@@ -6,18 +6,17 @@ export class DateUtilService {
 
 
     getLeastDays(notificationDate: number[]): number {
-        let month = notificationDate[1];
         let today = new Date().getTime();
         let countDownDate = new Date(notificationDate[0],
-            notificationDate[1],
+            notificationDate[1] - 1,
             notificationDate[2], 0, 0, 0, 0).getTime();
-        let distance = countDownDate - today;
-        return Math.floor(distance / (1000 * 60 * 60 * 24));
+        let distance = today - countDownDate;
+        return 31 - Math.floor(distance / (1000 * 60 * 60 * 24));
     }
 
     localDateToDate(localDate: number[]): Date {
         if (localDate != null) {
-            return new Date(localDate[0], localDate[1], localDate[2], 0, 0, 0, 0);
+            return new Date(localDate[0], localDate[1] - 1, localDate[2], 0, 0, 0, 0);
         }
     }
 
@@ -27,7 +26,8 @@ export class DateUtilService {
     }
     dateToLocalDate(date: Date): number[] {
         if (date != null) {
-            return [date.getFullYear(), date.getMonth(), date.getDate()];
+            console.log(date.getMonth());
+            return [date.getFullYear(), date.getMonth() + 1, date.getDate()];
         }
     }
 

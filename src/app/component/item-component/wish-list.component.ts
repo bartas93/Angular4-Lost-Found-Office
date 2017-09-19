@@ -34,7 +34,7 @@ export class WishListComponent implements OnInit {
 
     getLeastDaysString(notificationDate: number[]): string {
         let days = this.dateUtilService.getLeastDays(notificationDate);
-        if (days < 0) {
+        if (days <= 0) {
             return "Item is ready to collect!";
         } else {
             return "Ready for collection in " + days + " days";
