@@ -1,3 +1,21 @@
+Learning app - Angular4 
+
+Task was:
+
+System is intended to 'Lost and Found Items' organization. Only admin role exists
+Consists of 3 pages: 'Items Lost', 'Items Found' and 'Wishlists'.
+Each item has its own info page with basic info (weight, color, photos, category etc.
+All listings can be sorted (date added, alphatebically...) and filtered (category, etc.).
+Admin is able to add a lost item to the system.
+Admin is able to return the item from listing to its owner.
+Admin can add users to item's wishlist. If the owner does not collect the stuff in 1 month, then the person who first reserved the item is able to collect it.
+User can reserve up to 3 items. Each item has reservation queue with users waiting for collection (FIFO) only when the owner does not collect it.
+Admin confirms or declines the user's collection: by owner or according to queue. (History of item needs to be tracked)
+During item collection, user may also rate the item with 5-star system.
+Every user needs to have a profile in the system (created by admin) with personal data.
+Use Bootstrap CSS/controls and remember to keep it user friendly!
+Use HTTP communication, modal windows and date picker for choosing date.
+
 # ItemOfficeWebApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
