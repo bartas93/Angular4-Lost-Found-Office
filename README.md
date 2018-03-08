@@ -1,6 +1,8 @@
-Learning app - Angular4 
+Used Technologies: Angular material
 
-Task was:
+App working with back-end: https://github.com/bartas93/Spring-Backend-for-Lost-found-office
+
+Learning app - Task was:
 
 System is intended to 'Lost and Found Items' organization. Only admin role exists
 Consists of 3 pages: 'Items Lost', 'Items Found' and 'Wishlists'.
